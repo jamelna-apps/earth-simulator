@@ -1,26 +1,206 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #0a0b0d;
+  --color-bg-panel: #0f1114;
+  --color-bg-control: #141720;
+  --color-terminal: #33ff33;
+  --color-amber: #ffaa00;
+  --color-red: #ff3333;
+  --color-classified: #cc0000;
+  --color-text: #c8ccd4;
+  --color-text-dim: #8590a0;
+  --color-border: #1e2230;
+
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-heading: "Space Mono", ui-monospace, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+/* Scanline overlay */
+.scanline-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.03) 0px,
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+/* CRT glow on terminal text */
+.text-glow {
+  text-shadow: 0 0 8px rgba(51, 255, 51, 0.4);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 8px rgba(255, 170, 0, 0.4);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(255, 51, 51, 0.4);
+}
+
+/* Radar blink for map overlays */
+@keyframes radar-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.radar-blink {
+  animation: radar-blink 1.2s ease-in-out infinite;
+}
+
+/* CRT monitor border glow */
+.crt-border {
+  box-shadow: 0 0 15px rgba(51, 255, 51, 0.05), inset 0 0 15px rgba(51, 255, 51, 0.02);
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: "█";
+  animation: blink 1s step-end infinite;
+  color: var(--color-terminal);
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(40, end);
+}
+
+/* Classification stamp */
+.stamp {
+  transform: rotate(-12deg);
+  border: 3px solid var(--color-classified);
+  color: var(--color-classified);
+  padding: 4px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+/* Redacted blocks */
+.redacted {
+  background: var(--color-text);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.redacted:hover {
+  background: transparent;
+  color: var(--color-terminal);
+}
+
+/* Control slider track */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  height: 6px;
+  border-radius: 0;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 20px;
+  background: var(--color-terminal);
+  border: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 20px;
+  background: var(--color-terminal);
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+/* Section reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-reveal {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Padlock animation */
+@keyframes unlock-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.unlock-animate {
+  animation: unlock-shake 0.3s ease-in-out;
+}
+
+/* Gauge bar */
+.gauge-fill {
+  transition: width 0.5s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-dim);
+}
+
+/* Hide scrollbar on nav */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
