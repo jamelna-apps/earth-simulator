@@ -39,9 +39,9 @@ export default function Footer() {
             </div>
             <Link
               href="/logs"
-              className="mt-3 inline-block text-xs text-text-dim hover:text-terminal transition-colors font-mono"
+              className="mt-3 inline-block text-sm text-terminal border border-terminal/30 px-3 py-1.5 hover:bg-terminal/10 hover:border-terminal/60 transition-all font-mono tracking-wide text-glow"
             >
-              FULL OPERATOR LOG ARCHIVE →
+              ◈ FULL OPERATOR LOG ARCHIVE →
             </Link>
           </div>
         </div>
