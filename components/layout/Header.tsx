@@ -37,9 +37,9 @@ export default function Header() {
             <div className="text-text-dim">ANOMALIES: <span className="text-red">847</span></div>
             <Link
               href="/logs"
-              className="mt-2 inline-block text-xs text-text-dim hover:text-terminal border border-border hover:border-terminal/40 px-3 py-1 transition-colors font-mono"
+              className="mt-3 inline-block text-sm text-terminal border border-terminal/30 px-4 py-2 hover:bg-terminal/10 hover:border-terminal/60 transition-all font-mono tracking-wide text-glow"
             >
-              VIEW OPERATOR LOGS →
+              ◈ VIEW OPERATOR LOGS →
             </Link>
           </div>
         </div>
