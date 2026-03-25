@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { OperatorLogEntry } from '@/data/types'
 
 interface OperatorLogProps {
@@ -20,6 +21,14 @@ export default function OperatorLog({ entries }: OperatorLogProps) {
               <span className="text-text-dim/40">[{entry.classification}] </span>
             ) : null}
             {entry.message}
+            {entry.reportSlug && (
+              <Link
+                href={`/logs/reports/${entry.reportSlug}`}
+                className="inline-block ml-2 text-xs text-terminal border border-terminal/30 px-1.5 py-0.5 hover:bg-terminal/10 transition-colors whitespace-nowrap"
+              >
+                [DOSSIER AVAILABLE]
+              </Link>
+            )}
           </div>
         </div>
       ))}

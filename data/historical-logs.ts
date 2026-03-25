@@ -31,6 +31,7 @@ export const historicalLogs: HistoricalEra[] = [
         timestamp: 'Cycle 0.03×10⁹',
         message: 'INCIDENT REPORT: Protoplanetary body "Theia" has collided with TERRA-01. This was not scheduled. Investigating root cause. Preliminary finding: orbital resonance calculation used deprecated library. Result: large debris ring now forming. Recommend we call it a "moon" and move on.',
         classification: 'SECRET',
+        reportSlug: 'theia-impact',
       },
       {
         operator: 'SYSTEM',
@@ -196,6 +197,7 @@ export const historicalLogs: HistoricalEra[] = [
         timestamp: 'Cycle 4.28×10⁹',
         message: 'THE GREAT DYING. Permian-Triassic extinction. 96% of all species eliminated. 96%. I want to emphasize that number. Cause: volcanic province in region later designated "Siberia" released enough CO₂ and methane to acidify oceans and raise temperatures by 10°C. The planet nearly sterilized itself. Via volcanism. The simulation\'s auto-destruct mechanism is its own geology. No one designed this. It emerged.',
         classification: 'SECRET',
+        reportSlug: 'the-great-dying',
       },
       {
         operator: 'Ethics Board (dissolved)',
@@ -243,6 +245,7 @@ export const historicalLogs: HistoricalEra[] = [
         timestamp: 'Cycle 4.41×10⁹',
         message: 'The ████████ survey team has violated protocol. They landed. Twice. Once in the region that will become the Sahara, and once near what will become the Yucatán. They left behind equipment that they insist is "biodegradable on a geological timescale." I have filed a formal complaint. They sent back a gift basket.',
         classification: 'TOP SECRET',
+        reportSlug: 'survey-team',
       },
       {
         operator: 'SYSTEM',
@@ -362,6 +365,7 @@ export const historicalLogs: HistoricalEra[] = [
         timestamp: 'Cycle 4.53992×10⁹',
         message: 'PROJECT ATLANTIS — POST-MORTEM: Experimental advanced civilization seeded on a mid-Atlantic island platform. Population: 50,000. Technology level: approximately 3,000 years ahead of continental peers. Purpose: accelerated development study. Result: the island\'s geological substrate was insufficiently tested. Volcanic and seismic activity destroyed the platform in a single event. All data lost. All subjects lost. Committee voted to classify the project and let the remaining subjects treat it as mythology. Motion passed unanimously. This is the most shameful entry in my log.',
         classification: 'TOP SECRET',
+        reportSlug: 'project-atlantis',
       },
       {
         operator: 'Operator ██████-7',
@@ -440,6 +444,7 @@ export const historicalLogs: HistoricalEra[] = [
         timestamp: 'Cycle 4.54×10⁹',
         message: 'Subjects received an unexplained 72-second radio signal from the direction of Sagittarius. They designated it "Wow!" Internal investigation confirms: Operator ██████-7 accidentally transmitted a diagnostic ping on an unshielded frequency while running telemetry checks. It will not happen again. The subjects remain excited. We are not correcting them.',
         classification: 'TOP SECRET',
+        reportSlug: 'wow-signal',
       },
       {
         operator: 'Operator ████-12',

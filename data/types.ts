@@ -47,4 +47,5 @@ export interface OperatorLogEntry {
   timestamp: string
   message: string
   classification?: Classification
+  reportSlug?: string
 }
