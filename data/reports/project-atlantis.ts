@@ -22,7 +22,7 @@ export const projectAtlantis: DossierReport = {
       heading: undefined,
       content: '',
       image: {
-        query: 'underwater ruins ancient',
+        query: 'deep ocean blue',
         alt: 'Sonar reconstruction of platform remnants',
         caption:
           'Sonar reconstruction of platform remnants, present day. Depth: 3,200m. Structural integrity: 2%. Identifiable artifacts: 0. Everything that mattered is gone.',
@@ -47,7 +47,7 @@ export const projectAtlantis: DossierReport = {
       heading: undefined,
       content: '',
       image: {
-        query: 'ocean storm dramatic dark',
+        query: 'storm ocean waves',
         alt: 'Atmospheric conditions over target site',
         caption:
           'Atmospheric conditions over target site, final day. Reconstructed from telemetry. The storm was not the cause. It was a symptom. The ocean floor was collapsing.',
@@ -58,7 +58,7 @@ export const projectAtlantis: DossierReport = {
       heading: undefined,
       content: '',
       image: {
-        query: 'ancient stone temple ruins overgrown',
+        query: 'ancient ruins stone',
         alt: "Continental subjects' artistic interpretation",
         caption:
           "Continental subjects' artistic interpretation of the lost civilization, discovered Cycle 4.5399×10⁹. They call it 'Atlantis.' They think it is a story. It is not a story.",

@@ -20,7 +20,7 @@ export const surveyTeam: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'ancient pyramids night sky stars',
+        query: 'pyramids egypt night',
         alt: 'Structures in the Nile delta region',
         caption:
           'Structures in Nile delta region. Precision: 1/15th of a degree. Weight per block: 2.3 million kg. Official explanation: "ramps and considerable motivation." Actual explanation: see Appendix C (CLASSIFIED).',
@@ -36,7 +36,7 @@ export const surveyTeam: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'stonehenge misty morning',
+        query: 'stonehenge',
         alt: 'Signal antenna array, decommissioned',
         caption:
           'Signal antenna array (decommissioned), current configuration. Original function: long-range monitoring. Current function: solstice tourism. The subjects feel "connected to something larger." Technically accurate.',
@@ -53,7 +53,7 @@ export const surveyTeam: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'strange lights night sky',
+        query: 'northern lights sky',
         alt: 'Unshielded propulsion signature',
         caption:
           'Unshielded propulsion signature captured during unauthorized low-altitude pass, late Cretaceous. The ████████ were asked to maintain 60km altitude. This image was taken at approximately 200m. They described this as "a navigational adjustment."',

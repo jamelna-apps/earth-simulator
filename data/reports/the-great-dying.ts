@@ -20,7 +20,7 @@ export const theGreatDying: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'volcanic eruption ash cloud',
+        query: 'volcano eruption',
         alt: 'Siberian Traps eruption',
         caption:
           'Siberian Traps volcanic province, surface capture. Eruption duration: approximately 2 million years. Area affected: 7 million km². Status at time of capture: ongoing.',
@@ -36,7 +36,7 @@ export const theGreatDying: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'dead coral reef bleached',
+        query: 'bleached coral reef',
         alt: 'Marine ecosystem collapse',
         caption:
           'Marine ecosystem sampling, post-event. Reef systems survival rate: 0%. Biodiversity index: catastrophic. Recovery timeline: 10 million years (estimated).',

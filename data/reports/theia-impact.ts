@@ -20,7 +20,7 @@ export const theiaImpact: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'asteroid impact space',
+        query: 'full moon dark sky',
         alt: 'Reconstructed render of Theia approach',
         caption:
           'Reconstructed render of Theia approach vector, T-72hrs. Collision probability at this point: 100%. Notification sent: none.',
@@ -43,7 +43,7 @@ export const theiaImpact: DossierReport = {
     {
       type: 'evidence',
       image: {
-        query: 'molten lava surface glow',
+        query: 'lava flow night',
         alt: 'Surface conditions post-impact',
         caption:
           'Surface conditions, T+48hrs. Temperature: 4,500°C. Habitability index: 0.00. Aesthetic index: surprisingly high.',

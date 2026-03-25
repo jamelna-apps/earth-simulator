@@ -61,7 +61,7 @@ export const wowSignal: DossierReport = {
       type: 'evidence',
       content: '',
       image: {
-        query: 'control room monitors dark screens',
+        query: 'server room monitors',
         alt: 'Telemetry monitoring station',
         caption:
           'TERRA-01 telemetry station, Antenna Array 7 (artist\'s approximation). Actual facility configuration is CLASSIFIED. The dampening shield — the one component that would have prevented this entire incident — is visible in the lower left. It is not engaged. It was not engaged on August 15, 1977. It has been engaged on every subsequent check.',
